@@ -797,7 +797,7 @@ function borg_menu_link(array $variables) {
   }
 
   if ($menu_name === 'main-menu' && ($element['#href'] == 'https://forum.backdropcms.org' ||
-      $element['#href'] == 'https://api.backdropcms.org')) {
+      $element['#href'] == 'https://docs.backdropcms.org')) {
     $title = check_plain($element['#title']);
     $element['#title'] = $title . ' <i class="fa fa-external-link" aria-hidden="true"></i>';
     $element['#localized_options']['html'] = TRUE;
