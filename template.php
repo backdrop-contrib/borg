@@ -9,14 +9,6 @@
  ******************************************************************************/
 
 /**
- * Implements hook_form_id_alter()
- * Modify the user edit form for usability++
- */
-function borg_form_user_profile_form_alter(&$form, &$form_state) {
-
-}
-
-/**
  * Implements hook_form_FORM_ID_alter().
  */
 function borg_form_user_register_form_alter(&$form, &$form_state) {
@@ -84,12 +76,18 @@ function borg_menu_alter(&$items) {
  * @see page.tpl.php
  */
 function borg_preprocess_page(&$variables) {
+  $arg0 = check_plain(arg(0));
+  $arg1 = check_plain(arg(1));
+  $arg2 = check_plain(arg(2));
+
   // Add the Source Sans Pro font.
   $source_sans = 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700';
   backdrop_add_css($source_sans, array('type' => 'external'));
+
   // Add FontAwesome.
   $font_awesome = 'https://use.fontawesome.com/baf3c35582.js';
   backdrop_add_js($font_awesome, array('type' => 'external'));
+
   // Add ForkAwesome.
   $fork_awesome = 'https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css';
   $attributes = array(
@@ -104,10 +102,6 @@ function borg_preprocess_page(&$variables) {
   }
 
   $path = backdrop_get_path('theme', 'borg');
-  $arg0 = check_plain(arg(0));
-  $arg1 = check_plain(arg(1));
-  $arg2 = check_plain(arg(2));
-
   // Add Flexslider to the front page only.
   if (backdrop_is_front_page()) {
     backdrop_add_css($path . '/css/page-front.css');
@@ -147,12 +141,12 @@ function borg_preprocess_page(&$variables) {
     }
   }
 
-  // Add a node class based on the node ID...
+  // Add a class based on the node ID...
   if ($arg0 == 'node' && is_numeric($arg1) && !$arg2) {
     $variables['classes'][] = 'node-' . $arg1;
   }
 
-  // ...or add body classes based on args.
+  // ...or add classes based on args.
   elseif ($arg0) {
     $variables['classes'][] = $arg0;
     if ($arg1) {
@@ -368,26 +362,6 @@ function borg_preprocess_node(&$variables){
   // Change the submitted by language for all nodes.
   $variables['submitted'] = t('Posted by !username on !datetime', array(
     '!username' => $variables['name'], '!datetime' => $variables['date']));
-
-  // Get the theme location.
-  $path = backdrop_get_path('theme', 'borg');
-
-  // For project nodes include a special stylesheet.
-  if (($variables['type'] == 'core') || substr($variables['type'], 0, 8) == 'project_'){
-    if ($variables['type'] == 'project_release') {
-
-    }
-    else {
-      unset($variables['content']['project_release_downloads']['#prefix']);
-      $variables['classes'][] = 'node-project';
-      backdrop_add_css($path . '/css/node-project.css');
-    }
-  }
-
-  // For showcase nodes include a special stylesheet.
-  if ($variables['type'] == 'showcase') {
-    backdrop_add_css($path . '/css/node-showcase.css');
-  }
 }
 
 /**
