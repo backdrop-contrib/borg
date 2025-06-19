@@ -13,12 +13,13 @@
   --color__purple-vlight: #EAE1FF;
 
   --color__gray: #F2F2F2;
-  --color__gray-vlight: #F9F8FB;
+  --color__gray-light: #F9F8FB; /* new design - section background */
+
   --color--gray-purple-light: #EAE1FF;
   --color__gray-purple-mid: #C3BCD5;
 
   --color__gray-white: #FAFAFA;
-  --color__gray-faint: #ECECEC;
+  --color__gray-faint: #ECECEC; /* replaces #E8E6E5 */
   --color__gray-dark: #7D7D7D;
   --color__gray-black: #34333F;
 
@@ -34,9 +35,10 @@
   --color__border--gray-light: var(--color--gray-purple-light);
   --color__border--gray-mid: var(--color__gray-purple-mid);
 
-  --color__background--gray-vlight: var(--color__gray-vlight);
   --color__background--gray: var(--color__gray);
   --color__background--gray-mid: var(--color__gray-faint);
+
+  --color__background--section--gray: var(--color__gray-light);
 
   /* Fonts */
   --font-family--sans: "IBM Plex Sans", "Open Sans", Helvetica, sans-serif;
