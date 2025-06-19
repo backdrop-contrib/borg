@@ -13,7 +13,8 @@
   --color__purple-vlight: #EAE1FF;
 
   --color__gray: #F9F8FB;
-  --color__gray-purple-light: #F2F2F2;
+  --color__gray-purple-vlight: #F2F2F2;
+  --color--gray-purple-light: #EAE1FF;
   --color__gray-purple-mid: #C3BCD5;
 
   --color__gray-white: #FAFAFA;
@@ -28,10 +29,13 @@
   --color__accent--primary: var(--color__purple);
   --color__accent--primary--dark: var(--color__purple-dark);
   --color__accent--primary--light: var(--color__purple-light);
-
   --color__accent--secondary: #01FDA6; /* green? */
 
-  --color__border--light: var(--color__gray-purple-mid);
+  --color__border--gray-light: var(--color--gray-purple-light);
+  --color__border--gray-mid: var(--color__gray-purple-mid);
+
+  --color__background--gray: var(--color__gray);
+  --color__background--gray-mid: var(--color__gray-faint);
 
   /* Fonts */
   --font-family--sans: "IBM Plex Sans", "Open Sans", Helvetica, sans-serif;

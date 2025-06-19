@@ -58,7 +58,7 @@ nav.tabs {
   margin: 0 0 var(--section__padding-sm);
 }
 ul.primary {
-  border-bottom: 1px solid var(--color__border--light);
+  border-bottom: 1px solid var(--color__border--gray-mid);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -72,8 +72,8 @@ ul.primary li {
 }
 ul.primary li a {
   display: inline-block;
-  background-color: var(--color__gray-faint);
-  border-color: var(--color__border--light);
+  background-color: var(--color__background--gray-mid);
+  border-color: var(--color__border--gray-mid);
   border-style: solid solid none solid;
   height: auto;
   margin-right: 0.25em; /* LTR */
@@ -86,22 +86,22 @@ ul.primary li a {
 }
 ul.primary li.active a {
   background-color: #fff;
-  border-color: var(--color__border--light);
+  border-color: var(--color__border--gray-mid);
   border-bottom: none;
   padding-bottom: 7px;
 }
 ul.primary li a:hover {
-  border-color: var(--color__border--light);
+  border-color: var(--color__border--gray-mid);
   text-decoration: underline;
 }
 
 ul.secondary {
-  border-bottom: 1px solid var(--color__border--light);
+  border-bottom: 1px solid var(--color__border--gray-mid);
   padding: 0.5em;
   margin: 5px 0;
 }
 ul.secondary li {
-  border-right: 1px solid var(--color__border--light); /* LTR */
+  border-right: 1px solid var(--color__border--gray-mid); /* LTR */
   display: inline;
   padding: 0 1em;
 }
@@ -143,16 +143,16 @@ nav.breadcrumb li a {
 *******************************************************************************/
 .vertical-tabs {
   background-color: var(--color__gray-white);
-  border: 1px solid var(--color__border--light);
+  border: 1px solid var(--color__border--gray-mid);
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
 .vertical-tab-item {
-  border-color: var(--color__border--light);
+  border-color: var(--color__border--gray-mid);
   border-left-width: 0;
 }
 .vertical-tabs-panes {
-  border-left: 1px solid var(--color__border--light);
+  border-left: 1px solid var(--color__border--gray-mid);
 
 }
 .vertical-tabs-panes .fieldset-wrapper {
@@ -210,8 +210,8 @@ nav.breadcrumb li a {
   margin-top: 50px;
 }
 .book-navigation .book-pager {
-  border-top: 2px solid #d4d4d6;
-  border-bottom: 2px solid #d4d4d6;
+  border-top: 2px solid var(--color__border--gray-light);
+  border-bottom: 2px solid var(--color__border--gray-light);
   margin: 3em 0 0 0;
 }
 .book-add-child a {
@@ -1563,17 +1563,13 @@ input.button-secondary:hover {
   color: white;
 }
 
-a.form-cancel {
-
-}
-
 a.button {
   display: inline-block;
   border: 2px solid var(--color__accent--primary--dark);
   background-color: white;
   color: var(--color__accent--primary--dark);
   font-size: 1.125rem; /* 18px */
-  border-radius: 20px;
+  border-radius: 2px;
   width: auto;
   margin: 10px 20px 10px 0;
   padding: 0 20px;
