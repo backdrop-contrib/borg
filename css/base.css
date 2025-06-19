@@ -7,21 +7,23 @@
 :root {
 
   /* Colors by name. */
-  --color__purple: #4D00FF;
-  --color__purple-dark: #3909a9;
-  --color__purple-light: #B79CF6;
-  --color__purple-vlight: #EAE1FF;
+  --color__purple: #4D00FF;        /* brand color - new design */
+  --color__purple-dark: #3909a9;   /* brand color (dark) - new design */
+  --color__purple-light: #B79CF6;  /* svgs, mobile toggle - new design */
+  --color__purple-vlight: #EAE1FF; /* section & menu item borders  - new design */
 
-  --color__gray: #F2F2F2;
-  --color__gray-light: #F9F8FB; /* new design - section background */
+  --color__gray-white: #FAFAFA; /* dropdown menu background + vtabs - new design */
+  --color__gray-light: #F9F8FB; /* section background - new design */
 
   --color--gray-purple-light: #EAE1FF;
-  --color__gray-purple-mid: #C3BCD5;
 
-  --color__gray-white: #FAFAFA;
-  --color__gray-faint: #ECECEC; /* replaces #E8E6E5 */
-  --color__gray-dark: #7D7D7D;
+  --color__gray-dark: #7D7D7D; /* menu text and border color - new design */
   --color__gray-black: #34333F;
+
+  /* legacy colors */
+  --color__gray: #F2F2F2; /*  */
+  --color__gray-purple-mid: #C3BCD5; /* tabs - legacy gray background */
+  --color__gray-faint: #E8E6E5; /* replace with #ECECEC? - legacy gray border & showcase UI bg */
 
   /* Colors by use. */
   --color__link: var(--color__purple-dark);
@@ -34,11 +36,14 @@
 
   --color__border--gray-light: var(--color--gray-purple-light);
   --color__border--gray-mid: var(--color__gray-purple-mid);
+  --color__border--gray-legacy: var(--color__gray-faint);
+
+  --color__border--section--gray: var(--color__purple-vlight);
 
   --color__background--gray: var(--color__gray);
-  --color__background--gray-mid: var(--color__gray-faint);
+  --color__background--gray-mid: var(--color__gray-faint); /* rename me */
 
-  --color__background--section--gray: var(--color__gray-light);
+  --color__background--section--gray: var(--color__gray-light); /* use with --color__purple-vlight borders */
 
   /* Fonts */
   --font-family--sans: "IBM Plex Sans", "Open Sans", Helvetica, sans-serif;
@@ -178,7 +183,7 @@ table {
 table th {
   font-size: 1.25em;
   font-weight: 400; /* Normal */
-  border-bottom: 2px solid #E8E6E5;
+  border-bottom: 2px solid var(--color__gray-faint);
 }
 tr.odd {
   background-color: #f7f7f7;
