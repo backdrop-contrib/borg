@@ -1474,11 +1474,11 @@ div.addressfield-container-inline::after {
  * All Views exposed forms
 *******************************************************************************/
 .views-exposed-form {
-  background-color: #F7F7F7;
+  background-color: var(--color__background--gray-vlight);
+  border: 1px solid var(--color__border--gray-light);
   color: #444b53;
   padding: 15px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-bottom: 15px;
 }
 .views-exposed-form .views-exposed-widget,
@@ -1496,7 +1496,7 @@ div.addressfield-container-inline::after {
 }
 @media (min-width: 34em) { /* 544px @ 16px font size -- SM */
   .views-exposed-form {
-    padding: 30px 0;
+    padding: 30px 15px;
     margin-bottom: 30px;
   }
 }
