@@ -11,17 +11,18 @@
   --color__purple-dark: #3909a9;   /* brand color (dark) - new design */
   --color__purple-light: #B79CF6;  /* svgs, mobile toggle - new design */
   --color__purple-vlight: #EAE1FF; /* section & menu item borders  - new design */
+    --color--gray-purple-light: #EAE1FF; /* @todo delete me - duplicate, see above */
 
   --color__gray-white: #FAFAFA; /* dropdown menu background + vtabs - new design */
   --color__gray-light: #F9F8FB; /* section background - new design */
-
-  --color--gray-purple-light: #EAE1FF;
 
   --color__gray-dark: #7D7D7D; /* menu text and border color - new design */
   --color__gray-black: #34333F;
 
   /* legacy colors */
-  --color__gray: #F2F2F2; /*  */
+  --color__gray: #F2F2F2;
+  --color__gray-darker: #F7F7F7; /* replace with --color__gray-light - blockquote, menu backgrounds */
+  --color__gray-dark: #444b53; /* sidebar menu borders, and ... */
   --color__gray-purple-mid: #C3BCD5; /* tabs - legacy gray background */
   --color__gray-faint: #E8E6E5; /* replace with #ECECEC? - legacy gray border & showcase UI bg */
 
@@ -34,16 +35,14 @@
   --color__accent--primary--light: var(--color__purple-light);
   --color__accent--secondary: #01FDA6; /* green? */
 
-  --color__border--gray-light: var(--color--gray-purple-light);
+  --color__border--section--gray: var(--color__purple-vlight); /* see below */
+    --color__border--gray-light: var(--color__purple-vlight); /* @todo delete me - duplicate */
   --color__border--gray-mid: var(--color__gray-purple-mid);
   --color__border--gray-legacy: var(--color__gray-faint);
 
-  --color__border--section--gray: var(--color__purple-vlight);
-
+  --color__background--section--gray: var(--color__gray-light); /* use with --color__border--section--gray borders */
   --color__background--gray: var(--color__gray);
-  --color__background--gray-mid: var(--color__gray-faint); /* rename me */
-
-  --color__background--section--gray: var(--color__gray-light); /* use with --color__purple-vlight borders */
+  --color__background--gray-mid: var(--color__gray-faint); /* rename me? */
 
   /* Fonts */
   --font-family--sans: "IBM Plex Sans", "Open Sans", Helvetica, sans-serif;
