@@ -652,28 +652,6 @@ a.feed-icon {
 }
 
 /*******************************************************************************
- * Social media icons - general.
-*******************************************************************************/
-
-div.fa-mastodon {
-  display: inline-block;
-  -webkit-mask-image: url(../images/mastodon-logo-black.svg);
-  mask-image: url(../images/mastodon-logo-black.svg);
-  background-image: url(../images/mastodon-logo-black.svg);
-  background-color: #007CBA;
-  content: '-';
-}
-
-div.fa-bluesky {
-  display: inline-block;
-  -webkit-mask-image: url(../images/bluesky-logo-black.svg);
-  mask-image: url(../images/bluesky-logo-black.svg);
-  background-image: url(../images/bluesky-logo-black.svg);
-  background-color: #007CBA;
-  content: '-';
-}
-
-/*******************************************************************************
  * On The Web social media links block.
 *******************************************************************************/
 .block-on-the-web-social-links {
@@ -1512,30 +1490,6 @@ div.addressfield-container-inline::after {
 }
 .l-top .views-exposed-form select {
   border: 1.5px solid black;
-}
-
-/*******************************************************************************
- * Font Awesome
-*******************************************************************************/
-/* make font-awesome heading icons have more space */
-h2 i.fa,
-h3 i.fa,
-h4 i.fa {
-  margin-right: 10px;
-}
-h5 i.fa,
-h6 i.fa {
-  margin-right: 5px;
-}
-
-/* make larger font-awesome heading icons vertically offset */
-h2 i.fa-lg {
-  position: relative;
-  top: 3px;
-}
-h4 i.fa-2x {
-  position: relative;
-  top: 5px;
 }
 
 /*******************************************************************************
