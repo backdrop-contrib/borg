@@ -215,7 +215,7 @@ figure {
 }
 figcaption {
   margin-top: 5px;
-  color: #444b53;
+  color: var(--color__gray-dark);
   font-size: .85em; /* relative size */
 }
 
@@ -256,10 +256,8 @@ label {
 input,
 textarea {
   font-size: 1.125rem; /* 18px */
-  color: #444b53;
+  color: var(--color__gray-dark);
   background-color: #fff;
-  line-height: 40px;
-  height: 40px;
   max-width: 100%;
   padding: 8px 10px 4px 10px;
   border: 1px solid var(--color__border--gray-mid);
@@ -268,13 +266,17 @@ textarea {
   box-sizing: border-box;
   border-radius: 2px;
 }
+input {
+  line-height: 42px; /* 42+1+1 border to match button with 40+2+2 border */
+  height: 42px; /* 42+1+1 border to match button with 40+2+2 border */
+}
 textarea {
   height: auto;
   padding: 10px;
 }
 select {
   height: 40px;
-  color: #444b53;
+  color: var(--color__gray-dark);
   padding: 4px 16px 4px 8px;
   background-color: white;
   border: 1px solid var(--color__border--gray-mid);
@@ -288,6 +290,8 @@ input[type="checkbox"] {
   margin-right: .5em;
 }
 input[type="submit"] {
+  line-height: 40px;
+  height: 42px;
   border: 2px solid var(--color__link);
   background-color: white;
   color: var(--color__link);
