@@ -874,7 +874,7 @@ a.otw-svg-mask-2 {
 }
 
 .field-type-text-long {
-  margin: 0 0 1em;
+  margin: 2em 0 1em;
 }
 
 .field-prefix {
@@ -1098,6 +1098,18 @@ body.user-form .page-title {
 *******************************************************************************/
 .filter-wrapper {
   padding: 3em 0 1.5em;
+}
+
+/*******************************************************************************
+ * Field table.
+*******************************************************************************/
+table.sticky-enabled,
+.field-multiple-table {
+  border: 1px solid var(--color__border--gray-legacy);
+}
+table.sticky-enabled th,
+.field-multiple-table th {
+  padding: .25em .5em 0;
 }
 
 /*******************************************************************************
