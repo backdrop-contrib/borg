@@ -204,15 +204,6 @@ function borg_preprocess_page(&$variables) {
   if (backdrop_is_front_page()) {
     backdrop_add_css($path . '/css/page-front.css');
   }
-  elseif ($arg0 == 'support') {
-    if ($arg1 == 'services') {
-      backdrop_add_css($path . '/css/page-services.css');
-    }
-  }
-  elseif ($arg0 == 'modules' || $arg0 == 'themes' || $arg0 == 'layouts') {
-    $variables['classes'][] = 'project-search';
-    backdrop_add_css($path . '/css/page-project-search.css');
-  }
   elseif ($arg0 == 'user') {
     if ($arg1 == 'login') {
       $variables['classes'][] = 'user-form';
