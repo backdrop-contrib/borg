@@ -167,13 +167,14 @@ function borg_preprocess_page(&$variables) {
   $arg0 = check_plain(arg(0));
   $arg1 = check_plain(arg(1));
   $arg2 = check_plain(arg(2));
+  $icons_needed = array();
 
   // Add the Source Sans Pro font.
   $source_sans = 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700';
   backdrop_add_css($source_sans, array('type' => 'external'));
 
   // Make the icons available for use in CSS.
-  $icons_needed = array('user-circle');
+  $icons_needed[] = 'user-circle';
   backdrop_add_icons($icons_needed);
 
   // Add FontAwesome.
@@ -244,6 +245,11 @@ function borg_preprocess_page(&$variables) {
         $variables['classes'][] = $arg0 . '-' . $arg1 . '-' . $arg2;
       }
     }
+  }
+
+  // Make the icons needed available for use in CSS.
+  if (!empty($icons_needed)) {
+    backdrop_add_icons($icons_needed);
   }
 }
 
