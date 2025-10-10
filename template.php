@@ -456,14 +456,17 @@ function borg_preprocess_block(&$variables) {
             'demo' => array(
               'title' => 'Demo Backdrop CMS',
               'href' => 'https://backdropcms.org/demo',
+              'attributes' => array('title' => 'Create your own demo sandbox'),
             ),
             'download' => array(
-              'title' => 'Download Backdrop v' . $version_info['latest']['version'],
+              'title' => 'Download version' . ' ' . $version_info['latest']['version'],
               'href' => $version_info['latest']['download_link'],
+              'attributes' => array('title' => 'Download the latest version'),
             ),
             'more' => array(
-              'title' => 'Other ways to try',
+              'title' => 'More ways to try Backdrop',
               'href' => 'https://backdropcms.org/try-backdrop',
+              'attributes' => array('title' => 'Discover other ways to try Backdrop CMS'),
             ),
           ),
         );
