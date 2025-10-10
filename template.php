@@ -455,7 +455,7 @@ function borg_preprocess_block(&$variables) {
           '#links' => array(
             'demo' => array(
               'title' => 'Demo Backdrop CMS',
-              'href' => 'https://www.backdropcms.org/demo',
+              'href' => 'https://backdropcms.org/demo',
             ),
             'download' => array(
               'title' => 'Download Backdrop v' . $version_info['latest']['version'],
