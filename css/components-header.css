@@ -1,0 +1,138 @@
+/*******************************************************************************
+ * components-header.css
+ *
+ * Contains styles for system Header block, and other header components.
+*******************************************************************************/
+
+/*******************************************************************************
+ * Site name and slogan.
+*******************************************************************************/
+a.site-name {
+  display: inline-block;
+  font-size: 2.125rem; /* 34px */
+  font-weight: 200;
+  letter-spacing: -.04em;
+}
+.site-name svg {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  position: relative;
+  top: 5px;
+}
+.site-slogan {
+  display: none;
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 2.125rem;
+  padding-top: 5px;
+}
+
+@media (min-width: 34em) { /* 544px @ 16px font size -- SM */
+  a.site-name {
+    font-size: 2rem; /* 32px */
+  }
+  .site-slogan {
+    display: inline-block;
+  }
+}
+
+/*******************************************************************************
+ * Borg menus - all header menus
+ ******************************************************************************/
+
+.l-header .block-system-main-menu {
+  display: inline-block;
+  text-align: right;
+  position: relative;
+  margin-top: 13px;
+}
+.borg-header-menu {
+  height: 36px;
+}
+.menu-account {
+  display: none;
+}
+.menu-demo {
+  display: none;
+  margin-left: 16px;
+}
+
+
+@media (min-width: 34em) { /* 544px @ 16px font size -- SM */
+  .l-header .block-system-main-menu {
+    padding-left: 0;
+  }
+  .menu-main,
+  .menu-demo {
+    display: inline-block;
+  }
+  .menu-demo {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: 48em) {  /* 768px @ 16px font size  -- MD */
+  .l-header .block-system-main-menu {
+    text-align: center;
+    margin-top: 0;
+  }
+  .borg-header-menu {
+    text-align: center;
+    margin-top: 16px;
+  }
+  .menu-main {
+    position: static;
+    left: 0;
+  }
+  .menu-demo {
+    display: none;
+  }
+  .l-header .container {
+    _background-color: orange;
+  }
+}
+
+@media (min-width: 62em) { /* 992px @ 16px font size -- LG */
+  .l-header .block-system-main-menu {
+    text-align: center;
+    margin-top: 7px;
+    display: flex;
+  }
+  .borg-header-menu {
+    margin-top: 8px;
+  }
+  .menu-demo {
+    position: static;
+    left: 0;
+    top: 0;
+  }
+  .menu-main,
+  .menu-account,
+  .menu-demo {
+    display: flex;
+    align-self: flex-end;
+  }
+  .menu-main {
+    flex: 1;
+    justify-content: centre;
+    align-items: centre;
+  }
+
+  .l-header .container {
+    _background-color: yellow;
+  }
+}
+
+@media (min-width: 75em) { /* 1200px @ 16px font size -- XL */
+  .l-header .container {
+    _background-color: green;
+  }
+}
+
