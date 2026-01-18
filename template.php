@@ -267,8 +267,9 @@ function borg_preprocess_layout(&$variables) {
   if ($arg0 == 'user' && !is_numeric($arg1)) {
     $variables['tabs'] = FALSE;
   }
+
   // Special handling for header image.
-  if ($arg0 == 'user' && is_numeric($arg1) && !$arg2) {
+  elseif ($arg0 == 'user' && is_numeric($arg1) && !$arg2) {
     // Check to see if there is a profile image.
     $account = user_load($arg1); // Entity cache should save us here?
     if (isset($account->field_header_photo[LANGUAGE_NONE][0]['uri'])) {
@@ -278,6 +279,12 @@ function borg_preprocess_layout(&$variables) {
       // Add an addidional class.
       $variables['wrap_attributes']['class'][] = 'has-background';
     }
+  }
+
+  // Special template suggestion for home pages.
+  elseif (backdrop_is_front_page()) {
+    $home_template = $variables['theme_hook_original'] . '__home';
+    $variables['theme_hook_suggestion'] = $home_template;
   }
 }
 
@@ -976,11 +983,13 @@ function borg_system_powered_by() {
  * Helper function: Get User Account menu.
  */
 function _borg_get_account_menu() {
-  $icon_size = '26px';
+  $icon_size = '30px';
   $icon_attributes = array('width' => $icon_size, 'height' => $icon_size);
   $icon_options = array('attributes' => $icon_attributes);
+  $icon = icon('user-circle', $icon_options);
   $link_options = array('html' => TRUE, 'attributes' => array('class' => array('has-submenu')));
-  $account_button = l(icon('user-circle', $icon_options), 'user', $link_options);
+  $account_text = '<span class="element-invisible">' . t('My account') . '</span>';
+  $account_button = l($account_text . $icon, 'user', $link_options);
 
   backdrop_add_library('system', 'smartmenus');
 

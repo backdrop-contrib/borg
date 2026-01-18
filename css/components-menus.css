@@ -11,21 +11,46 @@
 .block-system-main-menu ul.menu {
   position: absolute;
   width: 275px;
-  top: 50px;
-  right: 30px;
+  top: 48px;
+  right: 15px;
 }
 
-@media (min-width: 34em) { /* 544px @ 16px font size -- SM */
-  .block-system-main-menu ul.menu {
-    top: 54px;
-  }
-}
 @media (min-width: 48em) {  /* 768px @ 16px font size  -- MD */
   .block-system-main-menu ul.menu {
     position: relative;
     width: auto;
     top: 0;
     right: 0;
+  }
+}
+
+/*******************************************************************************
+ * Borg menus - all header menus.
+ ******************************************************************************/
+
+/* white bg for mobile menu */
+.borg-header-menu > ul.menu-dropdown {
+  background-color: #ffffff
+}
+.borg-header-menu > ul > li > a,
+.borg-header-menu > ul > li > a:hover,
+.borg-header-menu > ul > li > a:focus,
+.borg-header-menu > ul > li > a:active,
+.borg-header-menu > ul > li > a.highlighted {
+  padding: 10px;
+}
+.borg-header-menu > ul > li > a.active-trail,
+.borg-header-menu > ul > li > a.active,
+.borg-header-menu > ul > li > a:hover,
+.borg-header-menu > ul > li > a:focus,
+.borg-header-menu > ul > li > a:active,
+.borg-header-menu > ul > li > a.highlighted {
+  _border-bottom: 2px solid transparent;
+}
+
+@media (min-width: 48em) {  /* 768px @ 16px font size  -- MD */
+  .borg-header-menu > ul.menu-dropdown {
+    background-color: transparent;
   }
 }
 
@@ -38,27 +63,36 @@
 .menu-account > ul > li > a:focus,
 .menu-account > ul > li > a:active,
 .menu-account > ul > li > a.highlighted {
-  padding: 2px;
+  padding: 0;
 }
-@media (min-width: 48em) {  /* 768px @ 16px font size  -- MD */
+
+.menu-account > ul > li > a svg {
+  position: relative;
+  top: 3px;
+  width: 30px;
+  height: 30px;
 }
 
 /*******************************************************************************
- * Borg menus - demo
+ * Borg menus - demo - PURPLE
  ******************************************************************************/
 
 /* When the versions are not returned we have only one button */
 .menu-demo a.button-only {
-  padding: 9px 10px 7px 10px;
+  display: inline-block;
+  padding: 10px 10px 9px 10px;
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.0625rem; /* 17px */
   color: #ffffff;
   border-radius: 2px;
   background: var(--color__accent--primary);
 }
+.menu-demo a.button-only:hover {
+  background: var(--color__accent--primary--light);
+  color: #000000;
+}
 
 /* Otherwise we have a drop-down menu */
-.menu-demo > ul {
-  background-color: transparent;
-}
 .menu-demo > ul > li > a,
 .menu-demo > ul > li > a:hover,
 .menu-demo > ul > li > a:focus,
@@ -80,7 +114,6 @@
 .menu-demo > ul > li > a:focus,
 .menu-demo > ul > li > a:active,
 .menu-demo > ul > li > a.highlighted {
-  border-bottom: 2px solid transparent;
   background: linear-gradient(
     90deg,
     var(--color__accent--primary--dark) 0%,
@@ -123,6 +156,9 @@
   }
 }
 @media (min-width: 48em) {  /* 768px @ 16px font size  -- MD */
+  .menu-demo a.button-only {
+    font-size: 1.125rem; /* 18px; */
+  }
   .menu-demo > ul > li > a > span.sub-arrow {
     right: 13px;
   }
