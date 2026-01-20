@@ -315,7 +315,6 @@ article.comment ul.links.inline {
 /*******************************************************************************
  * More link specifically
 *******************************************************************************/
-
 li.node-readmore a:after {
   content: ' »';
 }
@@ -732,11 +731,15 @@ a.otw-svg-mask-2 {
 }
 .block-borg-signup-newsletter input[type="submit"] {
   font-size: 1.125rem;
-  background: var(--color__accent--primary--light);
-  color: #000;
+  background: var(--color__accent--primary);
   padding: 0.3em 1.111em;
   margin: 20px 0 10px 0;
   height: auto;
+}
+.block-borg-signup-newsletter input[type="submit"]:hover {
+  background: var(--color__accent--primary--light);
+  border: 2px solid var(--color__accent--primary--light);
+  color: #000;
 }
 .block-borg-signup-newsletter .form-actions {
   text-align: left;
@@ -1482,7 +1485,7 @@ div.addressfield-container-inline::after {
 input.button-primary {
   background-color: var(--color__accent--primary);
   color: white;
-  border: 2px solid var(--color__link);
+  border: 2px solid var(--color__accent--primary);
 }
 input.button-primary:hover {
   background-color: var(--color__accent--primary--dark);
